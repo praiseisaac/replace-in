@@ -1,7 +1,7 @@
-# Replace in
+# Replace in (MacOS only)
 
 I decided to play around with Rust lang and worked on this.
-This allows you to set an action to replace any occurrence of a string in a file or directory.
+This allows you to replace any occurrence of a text in a file or directory.
 
 ### Prequisite
 1. Rust programming language. Install [here](https://www.rust-lang.org/learn/get-started)
