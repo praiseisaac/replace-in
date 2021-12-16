@@ -1,0 +1,3 @@
+cargo build
+cp target/debug/replace-in ~/Library/Services
+cp -R /Users/praisedaramola/Documents/replace-in/Replace\ in.workflow ~/Library/Services/Replace\ in.workflow
