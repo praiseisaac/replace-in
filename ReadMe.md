@@ -1,16 +1,17 @@
 # Replace in
 
 I decided to play around with Rust lang and worked on this.
-This allows you to set an action to replace any occurrence of a string in a file or folder.
+This allows you to set an action to replace any occurrence of a string in a file or directory.
 
 ### Prequisite
 1. Rust programming language. Install [here](https://www.rust-lang.org/learn/get-started)
 2. MacOS.
 
 ### Getting started
-1. To get started, run `git clone `.
-2. Run `./start` from the directory. If you get a `permission denied error`, run `chmod 755 ./start`, and rerun the file.
-3. Move the `replace_in` workflow to the `~/Library/Services` folder on your mac.
+1. To get started, run `git clone https://github.com/praiseisaac/replace-in.git`.
+2. Run `cd replace-in && ./start` from the directory. If you get a `permission denied error`, run `chmod 755 ./start` to give the file execute permission. You can read the file to verify its contents. Next, rerun the file.
 
-### Verify
-1. If you don't see the `Replace in` option in the `Quick action` menu, click `Customize` and check the `Replace in` checkbox.
+### Running
+1. To run the application, right click on a file or directory you want to replace a text in, navigate to `Quick actions`, then click on the `Replace in` action.
+2. If you don't see the `Replace in` option in the `Quick action` menu, click `Customize`, then check the `Replace in` checkbox.
+3. Repeat step 1.
