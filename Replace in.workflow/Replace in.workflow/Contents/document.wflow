@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}	tell application "Finder"		--&gt; display dialog (currentPath)		set toReplace to (my getToReplace()) as text		set replacement to (my getReplacement()) as text		set progress total steps to 2		set progress completed steps to 1		set progress description to "Renaming..."		set progress additional description to "Replacing text...."		display dialog (my runScript(toReplace, replacement, input))		-- Reset the progress information		set progress total steps to 0		set progress completed steps to 0		set progress description to ""		set progress additional description to ""	end tell	returnend runto runScript(toReplace, replacement, currentPath)	return (do shell script "~/Library/Services/replace-in \"" &amp; currentPath &amp; "\" \"" &amp; toReplace &amp; "\" \"" &amp; replacement &amp; "\"")end runScriptto getToReplace()	set theResponse to display dialog "Text to replace" default answer "" with icon note buttons {"Cancel", "Continue"} default button "Continue"	--&gt; {button returned:"Continue", text returned:"Jen"}	return (text returned of theResponse)end getToReplaceto getReplacement()	set theResponse to display dialog "Replace with" default answer "" with icon note buttons {"Cancel", "Continue"} default button "Continue"	--&gt; {button returned:"Continue", text returned:"Jen"}	return (text returned of theResponse)end getReplacement</string>
+					<string>on run {input, parameters}	tell application "Finder"		--&gt; display dialog (currentPath)		set toReplace to (my getToReplace()) as text		set replacement to (my getReplacement()) as text		display dialog (my runScript(toReplace, replacement, input))	end tell	returnend runto runScript(toReplace, replacement, currentPath)	return (do shell script "~/Library/Services/replace-in \"" &amp; currentPath &amp; "\" \"" &amp; toReplace &amp; "\" \"" &amp; replacement &amp; "\"")end runScriptto getToReplace()	set theResponse to display dialog "Text to replace" default answer "" with icon note buttons {"Cancel", "Continue"} default button "Continue"	--&gt; {button returned:"Continue", text returned:"Jen"}	return (text returned of theResponse)end getToReplaceto getReplacement()	set theResponse to display dialog "Replace with" default answer "" with icon note buttons {"Cancel", "Continue"} default button "Continue"	--&gt; {button returned:"Continue", text returned:"Jen"}	return (text returned of theResponse)end getReplacement</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>500.000000:368.000000</string>
+				<string>309.000000:368.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -128,17 +128,17 @@ end run</string>
 		<key>presentationMode</key>
 		<integer>15</integer>
 		<key>processesInput</key>
-		<false/>
+		<integer>0</integer>
 		<key>serviceInputTypeIdentifier</key>
 		<string>com.apple.Automator.fileSystemObject</string>
 		<key>serviceOutputTypeIdentifier</key>
 		<string>com.apple.Automator.nothing</string>
 		<key>serviceProcessesInput</key>
-		<false/>
+		<integer>0</integer>
 		<key>systemImageName</key>
 		<string>NSTouchBarRefresh</string>
 		<key>useAutomaticInputType</key>
-		<false/>
+		<integer>0</integer>
 		<key>workflowTypeIdentifier</key>
 		<string>com.apple.Automator.servicesMenu</string>
 	</dict>

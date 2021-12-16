@@ -10,10 +10,8 @@ fn main() {
         let placeholder = &args[2];
         let replacement = &args[3];
         let mut result = 0;
-        let mut path: String = format!(
-            "/{}",
-            String::from(&directory[1..directory.len()].join("/"))
-        );
+        let mut path: String =
+            format!("/{}", String::from(directory[1..directory.len()].join("/")));
         println!("Folder: {}\n\n", path);
         if Path::new(&path).exists() {
             println!(
@@ -24,10 +22,8 @@ fn main() {
                 let last_dir = &directory.len() - 2;
                 if &directory[last_dir] == placeholder {
                     directory[last_dir] = &replacement;
-                    let replaced_path = format!(
-                        "/{}",
-                        String::from(&directory[1..directory.len()].join("/"))
-                    );
+                    let replaced_path =
+                        format!("/{}", String::from(directory[1..directory.len()].join("/")));
                     fs::rename(
                         &path[..&path.len() - 1],
                         &replaced_path[..&replaced_path.len() - 1],
@@ -41,7 +37,7 @@ fn main() {
             } else if Path::new(&path).is_file() {
                 replace(&path, &placeholder, &replacement, 0);
             }
-            println!("Occurrences changed: {}", result);
+            println!("Occurrences changed: {}", &result);
         }
     }
 }
@@ -77,7 +73,8 @@ fn replace(filename: &String, string_to_replace: &str, replacement: &str, mut re
             }
             Err(_) => {}
         }
-        if filename.contains(&string_to_replace) {
+        let paths: Vec<&str> = filename.split("/").collect();
+        if paths[paths.len() - 1].contains(&string_to_replace) {
             rename(filename, &string_to_replace, &replacement);
             result += 1;
         }
