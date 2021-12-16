@@ -9,7 +9,7 @@ This allows you to replace any occurrence of a text in a file or directory.
 
 ### Getting started
 1. To get started, run `git clone https://github.com/praiseisaac/replace-in.git`.
-2. Run `cd replace-in && ./start` from the directory. 
+2. Run `cd replace-in && ./setup` from the directory. 
 3. If you get a `permission denied error`, run `chmod 755 ./start` to give the file execute permission. You can read the file to verify its contents. Next, run `./start`.
 
 ### Running
